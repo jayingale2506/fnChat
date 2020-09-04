@@ -1,0 +1,20 @@
+
+  
+     <div class="container">
+       <div class="header">
+         <h3>FinChat</h3>
+       </div>
+
+      <div class="input-text" #scrolldiv>
+      <ul *ngFor="let person of user; let last = last">  
+        <li><span class="Bot-title">Bot:&nbsp;&nbsp;</span>{{person.title}} {{last ? scrollToBottom() : ''}}</li> 
+               
+      </ul>
+      
+    </div>
+
+    <div class="input-container">       
+        <input [(ngModel)]="person.title" #userBox />    
+        <button (click)="addChat()" >Add</button>
+      </div>
+    </div>
